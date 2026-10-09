@@ -816,6 +816,124 @@
                 text-align: center;
             }
         }
+
+        /* Documents & Video Showcase Section */
+        .documents-section {
+            padding: 100px 0;
+            background: var(--white);
+            border-top: 1px solid var(--neutral-200);
+        }
+
+        .video-box {
+            background: var(--primary-900);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 3rem;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .video-player {
+            width: 100%;
+            max-height: 520px;
+            border-radius: var(--radius-md);
+            outline: none;
+            background: #000;
+        }
+
+        .video-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1.25rem;
+            color: var(--white);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .video-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .doc-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .doc-item-card {
+            background: var(--neutral-100);
+            border-radius: var(--radius-md);
+            padding: 1.75rem;
+            border: 1px solid var(--neutral-200);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .doc-item-card:hover {
+            transform: translateY(-500);
+            transform: translateY(-4px);
+            border-color: var(--primary-400);
+            box-shadow: var(--shadow-md);
+            background: var(--white);
+        }
+
+        .doc-item-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .doc-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            background: var(--primary-100);
+            color: var(--primary-800);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .doc-item-card:hover .doc-icon {
+            background: var(--primary-600);
+            color: var(--white);
+        }
+
+        .doc-info h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--primary-900);
+            margin-bottom: 0.25rem;
+        }
+
+        .doc-info p {
+            font-size: 0.85rem;
+            color: var(--neutral-500);
+        }
+
+        .doc-action-btns {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+        }
     </style>
 </head>
 <body>
@@ -829,7 +947,7 @@
                 </div>
                 <div class="brand-text">
                     <span class="brand-title">Unilasallista</span>
-                    <span class="brand-sub">Investigación & IA</span>
+                    <span class="brand-sub">Por Tomás Montoya Bolívar</span>
                 </div>
             </a>
             
@@ -837,6 +955,7 @@
                 <ul class="nav-links">
                     <li><a href="#inicio" class="nav-link">Inicio</a></li>
                     <li><a href="#acerca" class="nav-link">Acerca del Proyecto</a></li>
+                    <li><a href="#documentos" class="nav-link">Documentos & Video</a></li>
                     <li><a href="#entregables" class="nav-link">Entregables Clave</a></li>
                     <li><a href="#repositorio" class="nav-link">Repositorio</a></li>
                 </ul>
@@ -854,23 +973,23 @@
         <div class="container hero-grid">
             <div class="hero-content">
                 <div class="tag-pill">
-                    <i class="fa-solid fa-microchip"></i>
-                    <span>Actividad Académica Unilasallista</span>
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <span>Creador: Tomás Montoya Bolívar · Unilasallista</span>
                 </div>
                 <h1 class="hero-title">
                     Investigación e Implementación de <span>Skills en Gemini</span>
                 </h1>
                 <p class="hero-description">
-                    Exploración integral de capacidades agénticas, personalización de prompts instruccionales y desarrollo de habilidades avanzadas sobre el ecosistema IA de Google Gemini.
+                    Exploración integral de capacidades agénticas, personalización de prompts instruccionales y desarrollo de habilidades avanzadas sobre el ecosistema IA de Google Gemini. Desarrollado por <strong>Tomás Montoya Bolívar</strong>.
                 </p>
                 <div class="hero-actions">
-                    <a href="#entregables" class="btn btn-primary">
-                        <span>Explorar Entregables</span>
-                        <i class="fa-solid fa-arrow-down"></i>
+                    <a href="#documentos" class="btn btn-primary">
+                        <i class="fa-solid fa-file-video"></i>
+                        <span>Ver Video y Documentos</span>
                     </a>
                     <a href="#acerca" class="btn btn-secondary">
-                        <span>Conocer Detalles</span>
                         <i class="fa-solid fa-circle-info"></i>
+                        <span>Conocer Detalles</span>
                     </a>
                 </div>
             </div>
@@ -919,10 +1038,10 @@
 
                     <!-- Floating Badge -->
                     <div class="floating-badge">
-                        <i class="fa-solid fa-award" style="color: var(--accent-gold); font-size: 1.5rem;"></i>
+                        <i class="fa-solid fa-user-check" style="color: var(--accent-gold); font-size: 1.5rem;"></i>
                         <div>
-                            <strong style="display:block; font-size: 0.9rem;">Corporación Universitaria Unilasallista</strong>
-                            <span style="font-size: 0.78rem; color: var(--neutral-500);">Innovación Educativa 2026</span>
+                            <strong style="display:block; font-size: 0.9rem;">Tomás Montoya Bolívar</strong>
+                            <span style="font-size: 0.78rem; color: var(--neutral-500);">Creador · Unilasallista 2026</span>
                         </div>
                     </div>
                 </div>
@@ -945,7 +1064,7 @@
                 <div class="about-text">
                     <h3>Transformando la Interacción con Inteligencia Artificial</h3>
                     <p>
-                        El objetivo central de este trabajo universitario radica en conceptualizar, diseñar y validar una <strong>Skill personalizada para Gemini</strong>. A través de este proceso, se estudia la estructura de archivos de configuración, metodologías de prompting avanzado y patrones de diseño agénticos.
+                        El objetivo central de este trabajo universitario, creado por <strong>Tomás Montoya Bolívar</strong> para la Corporación Universitaria Unilasallista, radica en conceptualizar, diseñar y validar una <strong>Skill personalizada para Gemini</strong>. A través de este proceso, se estudia la estructura de archivos de configuración, metodologías de prompting avanzado y patrones de diseño agénticos.
                     </p>
                     <p>
                         La investigación abarca desde los fundamentos conceptuales plasmados en infografías hasta el código ejecutable y pruebas prácticas en cuadernos interactivos.
@@ -967,8 +1086,129 @@
                     <p style="font-size: 0.95rem; color: var(--neutral-600);">
                         Demostrar cómo la modularidad en los modelos de lenguaje permite extender las capacidades analíticas de la IA en entornos académicos y profesionales de ingeniería.
                     </p>
+                    <div style="margin-top: 1rem; padding: 0.75rem 1rem; background: rgba(5, 150, 105, 0.08); border-radius: var(--radius-sm); border-left: 3px solid var(--primary-600); font-size: 0.85rem; color: var(--primary-900);">
+                        <i class="fa-solid fa-id-card" style="margin-right: 6px;"></i> <strong>Autor / Creador:</strong> Tomás Montoya Bolívar
+                    </div>
                     <div class="quote-box">
                         "Las Skills representan la convergencia entre la intención humana y la ejecución autónoma de modelos generativos de última generación."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentos & Video Showcase Section -->
+    <section id="documentos" class="documents-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Recursos y Evidencias</span>
+                <h2 class="section-title">Video, Cuaderno e Infografía</h2>
+                <p class="section-desc">
+                    Accede de forma directa a la demostración en video, la infografía arquitectónica y el cuaderno interactivo de validación de la Skill.
+                </p>
+            </div>
+
+            <!-- Video Player Box -->
+            <div class="video-box">
+                <div class="video-title">
+                    <i class="fa-solid fa-circle-play" style="color: var(--primary-400); font-size: 1.6rem;"></i>
+                    <span>Demostración en Video del Proyecto</span>
+                </div>
+                <video class="video-player" controls preload="metadata">
+                    <source src="documentos/Untitled_Scene_10-09_23_32_22_20261009183323.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video HTML5. Puedes descargarlo directamente abajo.
+                </video>
+                <div class="video-meta">
+                    <div>
+                        <span style="font-weight: 600;"><i class="fa-solid fa-file-video" style="margin-right: 6px;"></i> Video Explicativo (MP4)</span>
+                        <span style="color: var(--neutral-400); font-size: 0.85rem; margin-left: 10px;">Creado por: Tomás Montoya Bolívar</span>
+                    </div>
+                    <a href="documentos/Untitled_Scene_10-09_23_32_22_20261009183323.mp4" download class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Descargar Video MP4</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Document Cards Grid -->
+            <div class="doc-cards-grid">
+                <!-- Card Infografía -->
+                <div class="doc-item-card">
+                    <div>
+                        <div class="doc-item-header">
+                            <div class="doc-icon">
+                                <i class="fa-solid fa-file-pdf"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h4>Infografía Conceptual</h4>
+                                <p>Documento PDF con la arquitectura</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--neutral-600); margin-bottom: 1rem;">
+                            Esquema gráfico estructurado sobre el funcionamiento de las Skills en Gemini, flujos agénticos y directrices del sistema.
+                        </p>
+                    </div>
+                    <div class="doc-action-btns">
+                        <a href="documentos/infografia_skills_gemini.pdf" target="_blank" class="btn btn-primary btn-sm">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <span>Ver PDF</span>
+                        </a>
+                        <a href="documentos/infografia_skills_gemini.pdf" download class="btn btn-secondary btn-sm">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Descargar</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Cuaderno -->
+                <div class="doc-item-card">
+                    <div>
+                        <div class="doc-item-header">
+                            <div class="doc-icon">
+                                <i class="fa-solid fa-book-bookmark"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h4>Cuaderno de Datos (.ipynb)</h4>
+                                <p>Jupyter / Colab Notebook ejecutable</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--neutral-600); margin-bottom: 1rem;">
+                            Scripts documentados en Python con el dataset de prueba, prompts de validación y métricas de desempeño.
+                        </p>
+                    </div>
+                    <div class="doc-action-btns">
+                        <a href="documentos/cuaderno_datos_skills_gemini_unilasallista.ipynb" download class="btn btn-primary btn-sm">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Descargar Cuaderno (.ipynb)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Video HD -->
+                <div class="doc-item-card">
+                    <div>
+                        <div class="doc-item-header">
+                            <div class="doc-icon">
+                                <i class="fa-solid fa-film"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h4>Video de Demostración</h4>
+                                <p>Archivo de video MP4</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--neutral-600); margin-bottom: 1rem;">
+                            Presentación audiovisual completa con la ejecución práctica de la Skill y explicación metodológica.
+                        </p>
+                    </div>
+                    <div class="doc-action-btns">
+                        <a href="documentos/Untitled_Scene_10-09_23_32_22_20261009183323.mp4" target="_blank" class="btn btn-primary btn-sm">
+                            <i class="fa-solid fa-play"></i>
+                            <span>Abrir Video</span>
+                        </a>
+                        <a href="documentos/Untitled_Scene_10-09_23_32_22_20261009183323.mp4" download class="btn btn-secondary btn-sm">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Descargar Video</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1001,8 +1241,8 @@
                         </p>
                     </div>
                     <div class="deliverable-footer">
-                        <span style="font-size: 0.8rem; color: var(--neutral-500);"><i class="fa-regular fa-file-image"></i> Formato Visual / PDF</span>
-                        <a href="#repositorio" class="link-action">Ver Detalle <i class="fa-solid fa-arrow-right"></i></a>
+                        <span style="font-size: 0.8rem; color: var(--neutral-500);"><i class="fa-regular fa-file-image"></i> Formato PDF</span>
+                        <a href="documentos/infografia_skills_gemini.pdf" target="_blank" class="link-action">Abrir PDF <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -1020,7 +1260,7 @@
                     </div>
                     <div class="deliverable-footer">
                         <span style="font-size: 0.8rem; color: var(--neutral-500);"><i class="fa-solid fa-play"></i> Demostración MP4</span>
-                        <a href="#repositorio" class="link-action">Ver Video <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#documentos" class="link-action">Ver Video <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -1038,7 +1278,7 @@
                     </div>
                     <div class="deliverable-footer">
                         <span style="font-size: 0.8rem; color: var(--neutral-500);"><i class="fa-solid fa-code"></i> Python / .ipynb</span>
-                        <a href="#repositorio" class="link-action">Abrir Notebook <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="documentos/cuaderno_datos_skills_gemini_unilasallista.ipynb" download class="link-action">Descargar Notebook <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -1069,7 +1309,7 @@
                         </div>
                         <h3 class="deliverable-title">Implementación de la Skill en Gemini</h3>
                         <p class="deliverable-text">
-                            Código fuente final de la Skill desarrollada, lista para ser integrada en el entorno agéntico de Gemini, incluyendo reglas de sistema, plantillas de entrada y validadores de respuesta.
+                            Código fuente final de la Skill desarrollada por <strong>Tomás Montoya Bolívar</strong>, lista para ser integrada en el entorno agéntico de Gemini.
                         </p>
                     </div>
                     <div class="deliverable-footer">
@@ -1088,10 +1328,10 @@
             <div class="cta-box">
                 <h2 class="cta-title">Accede al Código Fuente Completo</h2>
                 <p class="cta-desc">
-                    Revisa todo el material entregable, notebooks de prueba, infografías y documentación en el repositorio oficial de GitHub del proyecto.
+                    Revisa todo el material entregable, notebooks de prueba, infografías y documentación en el repositorio oficial de GitHub del proyecto creado por <strong>Tomás Montoya Bolívar</strong>.
                 </p>
                 <div class="cta-btn-wrapper">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+                    <a href="https://github.com/tomyaxyt123-a11y/landing-skill-unilasallista" target="_blank" rel="noopener noreferrer" class="btn btn-github">
                         <i class="fa-brands fa-github" style="font-size: 1.25rem;"></i>
                         <span>Ver en GitHub Repository</span>
                     </a>
@@ -1110,8 +1350,8 @@
                         Institución de educación superior comprometida con la excelencia académica, la investigación formativa y la innovación tecnológica orientada al desarrollo social.
                     </p>
                     <div class="academic-badge">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>Actividad de Investigación en Inteligencia Artificial</span>
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <span>Creado por Tomás Montoya Bolívar</span>
                     </div>
                 </div>
 
@@ -1120,24 +1360,25 @@
                     <ul class="footer-links">
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#acerca">Acerca del Proyecto</a></li>
+                        <li><a href="#documentos">Documentos & Video</a></li>
                         <li><a href="#entregables">Entregables Clave</a></li>
                         <li><a href="#repositorio">Repositorio GitHub</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="footer-title">Entregables</h4>
+                    <h4 class="footer-title">Documentos y Recursos</h4>
                     <ul class="footer-links">
-                        <li><a href="#entregables">Infografía Conceptual</a></li>
-                        <li><a href="#entregables">Video Explicativo</a></li>
-                        <li><a href="#entregables">Cuaderno de Datos</a></li>
-                        <li><a href="#entregables">Implementación de Skill</a></li>
+                        <li><a href="documentos/infografia_skills_gemini.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i> Infografía PDF</a></li>
+                        <li><a href="documentos/Untitled_Scene_10-09_23_32_22_20261009183323.mp4" target="_blank"><i class="fa-solid fa-video"></i> Video Explicativo</a></li>
+                        <li><a href="documentos/cuaderno_datos_skills_gemini_unilasallista.ipynb" download><i class="fa-solid fa-book"></i> Cuaderno de Datos (.ipynb)</a></li>
+                        <li><a href="https://github.com/tomyaxyt123-a11y/landing-skill-unilasallista" target="_blank"><i class="fa-brands fa-github"></i> Código en GitHub</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Corporación Universitaria Unilasallista. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Corporación Universitaria Unilasallista. Creado por <strong>Tomás Montoya Bolívar</strong>. Todos los derechos reservados.</p>
                 <p>Investigación e Implementación de Skills en Gemini</p>
             </div>
         </div>

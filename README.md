@@ -53,13 +53,13 @@ landing-skill-unilasallista/
 └── README.md                   # Documentación técnica del proyecto (este archivo)
 ```
 
-| Ruta | Descripción |
-|------|-------------|
+| Ruta         | Descripción                                                                    |
+| ------------ | ------------------------------------------------------------------------------ |
 | `index.html` | Landing Page institucional con el resumen, entregables y enlaces del proyecto. |
-| `assets/` | Recursos estáticos: estilos, imágenes e infografía conceptual. |
-| `data/` | Cuaderno de datos (`.ipynb`) con scripts, dataset de validación y métricas. |
-| `skills/` | Código fuente de la Skill para Gemini (instrucciones + configuración). |
-| `.agents/` | Skills de agente instaladas en el entorno de desarrollo. |
+| `assets/`    | Recursos estáticos: estilos, imágenes e infografía conceptual.                 |
+| `data/`      | Cuaderno de datos (`.ipynb`) con scripts, dataset de validación y métricas.    |
+| `skills/`    | Código fuente de la Skill para Gemini (instrucciones + configuración).         |
+| `.agents/`   | Skills de agente instaladas en el entorno de desarrollo.                       |
 
 ---
 
@@ -74,12 +74,12 @@ El desarrollo se llevó a cabo combinando **asistencia de IA agéntica** con **p
 
 ### 3.2 Tecnologías Utilizadas
 
-| Tecnología | Uso |
-|------------|-----|
-| **HTML5** | Estructura semántica: `header`, `section`, `article`, `footer`. |
-| **CSS3 moderno** | Variables CSS (`:root`), **Grid** y **Flexbox**, `clamp`, transiciones y animaciones nativas. |
-| **Google Fonts** | Tipografías *Plus Jakarta Sans* y *Space Grotesk*. |
-| **Font Awesome 6** | Sistema de iconografía vectorial. |
+| Tecnología         | Uso                                                                                           |
+| ------------------ | --------------------------------------------------------------------------------------------- |
+| **HTML5**          | Estructura semántica: `header`, `section`, `article`, `footer`.                               |
+| **CSS3 moderno**   | Variables CSS (`:root`), **Grid** y **Flexbox**, `clamp`, transiciones y animaciones nativas. |
+| **Google Fonts**   | Tipografías *Plus Jakarta Sans* y *Space Grotesk*.                                            |
+| **Font Awesome 6** | Sistema de iconografía vectorial.                                                             |
 
 ### 3.3 Decisiones de Diseño
 - **Paleta "Emerald Corporate Tech":** tonos esmeralda institucionales combinados con acentos dorado y azul, transmitiendo rigor académico y modernidad tecnológica.
@@ -123,14 +123,17 @@ La Skill fue probada en el **cuaderno de datos** (`data/cuaderno_de_datos.ipynb`
 | Recurso | Enlace |
 |---------|--------|
 | 🌐 **Landing Page en vivo** | _[Pegar aquí el enlace de despliegue]_ |
-| 🎬 **Video en Flow** | _[Pegar aquí el enlace del video en Flow]_ |
-| 💻 **Repositorio GitHub** | _[Pegar aquí el enlace del repositorio]_ |
+| 🎬 **Video de Demostración** | [`documentos/`](documentos/Untitled_Scene_10-09_23_32_22_20261009183323.mp4) |
+| 📚 **Cuaderno de Datos** | [`cuaderno_datos_skills_gemini_unilasallista.ipynb`](documentos/cuaderno_datos_skills_gemini_unilasallista.ipynb) |
+| 🖼️ **Infografía PDF** | [`infografia_skills_gemini.pdf`](documentos/infografia_skills_gemini.pdf) |
+| 💻 **Repositorio GitHub** | [github.com/tomyaxyt123-a11y/landing-skill-unilasallista](https://github.com/tomyaxyt123-a11y/landing-skill-unilasallista) |
 
 ---
 
 ## Autoría y Reconocimientos
 
-**Corporación Universitaria Unilasallista**
+**Creador / Autor:** Tomás Montoya Bolívar  
+**Institución:** Corporación Universitaria Unilasallista  
 Actividad de Investigación en Inteligencia Artificial · 2026
 
 > Proyecto de carácter académico. Todo el material aquí contenido se distribuye con fines educativos e investigativos.
